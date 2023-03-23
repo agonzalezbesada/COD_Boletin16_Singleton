@@ -7,6 +7,20 @@ public class Singleton {
 
     }
 
+    // Instancia única
+    private static Singleton instance = null;
+
+    /**
+     * Crea o no el objeto dependiendo de si ya fue instanciado
+     * @return la instancia. Si no existe, crea el objeto
+     */
+    public static Singleton getInsatance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
     private String nombre;
     private int edad;
 
